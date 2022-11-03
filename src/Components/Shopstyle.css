@@ -1,0 +1,72 @@
+.main-wrapper{
+    background: #fff;
+    min-height: 100vh;
+    overflow-x: 0;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.display-style-btns{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #fff;
+    padding: 16px 0;
+    border-radius: 5px;
+}
+.display-style-btns button{
+    border: none;
+    font-size: 22px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.display-style-btns button:hover{
+    color: #f79410;
+}
+.active-btn{
+    color: #f79410;
+}
+.item-list{
+    margin: 36px 0;
+    display: grid;
+    row-gap: 32px;
+    grid-template-columns: repeat(1, 1fr);
+    
+}
+.item{
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 4px 0 #ccc;
+    transition: all 0.2s ease-out;
+    padding: 10px;
+}
+.item:hover{
+    box-shadow: 0 0 10px 1px #ccc;
+}
+@media screen and (min-width:678px){
+    .item-list{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+@media screen and (min-width:768px){
+    .item-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.details-active.item-list{
+    grid-template-columns: 100%;
+}
+.details-active .item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
